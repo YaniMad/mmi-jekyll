@@ -1,8 +1,11 @@
-# Readme
+# MMI x JEKYLL
 
 ## Static Site Generator
 
 https://jamstack.org/
+
+https://jekyllrb.com/
+
 
 
 ## Prise en main 
@@ -40,7 +43,7 @@ jekyll serve
 
 Une personne du groupe va créer le repository sur github. 
 
-Il va y inviter les membres de sont groupes.
+Il va y inviter les membres de son groupe.
 
 Cette même personne va préparer le site jekyll pour le projet : 
 
@@ -66,7 +69,10 @@ _site/
 .Trashes
 ```
 
-5. Versionné le code : 
+> ou vous pouvez le trouver ici : https://github.com/alexisben/mmi-jekyll/blob/master/.gitignore
+
+
+5. Versionner le code : 
 
 ```
 git add . 
@@ -76,13 +82,13 @@ git commit -m "Setup du projet Jekyll"
 git push
 ```
 
-6. Les autres membres peuvent cloner ou pull si ils ont déjà cloné le repo.
+6. Les autres membres peuvent cloner ou pull s'ils ont déjà cloné le repo.
 
-7. Se repartir les parties du site à intégrer entre chaque développeurs
+7. Se repartir les parties du site à intégrer entre chaque développeur.
 
-8. Créer ensemble en partage d'écran les dossiers et fichiers des parties que chacun développera sur sa machine.
+8. Créer ensemble (en partage d'écran) les dossiers et fichiers des parties que vous pourrez ensuite vous attribuer.
 
-9. Bravo vous êtes prêt à coder !
+9. Bravo vous êtes prêts à coder !
 
 ## Pré-processeur CSS
 
@@ -93,8 +99,6 @@ https://www.youtube.com/watch?v=aOccUzHD_MQ&ab_channel=Grafikart.fr
 
 ## Organisation des fichiers du site
 
-Ce qui nous intéresse pour cet atelier : 
-
 - _includes : C'est ici que l'on va mettre nos "partials" / nos "morceaux" de html.
 
 - _layouts : C'est ce qui va venir "encapsuler" le contenu de notre html, il contient généralement les balises essentielles : html / head / body / header / footer
@@ -103,7 +107,7 @@ Ce qui nous intéresse pour cet atelier :
 
 - _site : Ici on ne modifie rien ! C'est dans ce dossier que Jekyll va compiler nos fichiers et générer le site web.
 
-- assets : Ici on va appeler notre feuille main.scss, et y écrire notre JS. / ! \ on ne va pas styliser notre site dans ce dossier, mais juste y écrire notre javascripts.
+- assets : Ici on va appeler notre feuille main.scss, et y écrire notre JS. / ! \ on ne va pas styliser notre site dans ce dossier, mais c'est ici qu'on va écrire notre javascript.
 
 Ce qu'on va pour l'instant ignorer :
 
