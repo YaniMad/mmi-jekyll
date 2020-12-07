@@ -1,0 +1,146 @@
+# Readme
+
+## Static Site Generator
+
+https://jamstack.org/
+
+
+## Prise en main 
+
+1. Installer jekyll :
+
+- https://jekyllrb.com/docs/installation/windows/ (pc)
+- https://jekyllrb.com/docs/installation/macos/ (mac)
+- https://jekyllrb.com/docs/installation/ubuntu/ (linux)
+
+
+2. Naviguer jusqu'au dossier de votre choix (où vous voulez que vos fichiers soient sur votre ordinateur) via le terminal : utiliser la commande ```cd``` et ```pwd``` pour vous aider.
+
+
+3. Générer son premier siteweb avec jekyll : 
+```
+
+jekyll new my-website-name/ --blank
+
+```
+
+3. Entrer dans le dossier généré "cd my-website-name"
+
+4. Lancer le serveur jekyll avec la commande : 
+
+```
+
+jekyll serve
+
+```
+
+À partir de là, vous êtes prêt à développer !
+
+## Setup du projet
+
+Une personne du groupe va créer le repository sur github. 
+
+Il va y inviter les membres de sont groupes.
+
+Cette même personne va préparer le site jekyll pour le projet : 
+
+1. Cloner le repository sur son ordi (en ayant bien vérifier où est-ce qu'on voulait cloner les fichiers): ```git clone URL_DU_REPO```
+
+3. Générer le projet jekyll : 
+```
+
+jekyll new NOM_DU_DOSSIER_DU_REPO --blank
+
+```
+
+4. Créer un fichier ".gitignore" à la racine du dossier contenant les dossiers et fichiers à ignorer :
+
+```
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+```
+
+5. Versionné le code : 
+
+```
+git add . 
+
+git commit -m "Setup du projet Jekyll"
+
+git push
+```
+
+6. Les autres membres peuvent cloner ou pull si ils ont déjà cloné le repo.
+
+7. Se repartir les parties du site à intégrer entre chaque développeurs
+
+8. Créer ensemble en partage d'écran les dossiers et fichiers des parties que chacun développera sur sa machine.
+
+9. Bravo vous êtes prêt à coder !
+
+## Pré-processeur CSS
+
+https://sass-lang.com/guide
+
+https://www.youtube.com/watch?v=aOccUzHD_MQ&ab_channel=Grafikart.fr
+
+
+## Organisation des fichiers du site
+
+Ce qui nous intéresse pour cet atelier : 
+
+- _includes : C'est ici que l'on va mettre nos "partials" / nos "morceaux" de html.
+
+- _layouts : C'est ce qui va venir "encapsuler" le contenu de notre html, il contient généralement les balises essentielles : html / head / body / header / footer
+
+- _sass : C'est ici que l'on va écrire notre SASS, nos fichiers .scss, les fichiers .scss sont prefixé par un underscore "_", sauf le fichier main.scss. C'est dans main.scss que l'on va importer toutes les autres feuilles de styles.
+
+- _site : Ici on ne modifie rien ! C'est dans ce dossier que Jekyll va compiler nos fichiers et générer le site web.
+
+- assets : Ici on va appeler notre feuille main.scss, et y écrire notre JS. / ! \ on ne va pas styliser notre site dans ce dossier, mais juste y écrire notre javascripts.
+
+Ce qu'on va pour l'instant ignorer :
+
+- .jekyll-cache
+- _data
+- _drafts
+- _posts
+- _config.yml
+
+> Pour plus de clareté dans votre arborescence vous pouvez supprimer les dossiers : _data, _drafts et _posts
+
+## Convention Sass :
+
+https://sass-guidelin.es/fr/#architecture
+
+### _sass/base
+
+Le dossier base/ contient ce que nous pourrions appeler le code standard (boilerplate) du projet. On pourrait y trouver par exemple le fichier de reset, quelques règles typographiques, et probablement une feuille de style définissant quelques styles standard pour les éléments HTML les plus employés (que j’ai l’habitude d’appeler _base.scss).
+
+
+### _sass/layouts
+
+Le dossier layout/ contient tout ce qui concerne la mise en page du site ou de l’application. Ce dossier pourrait intégrer des feuilles de style pour les principales parties du site (header, footer, navigation, sidebar…), pour le système de grille ou même les styles CSS pour tous les formulaires.
+
+
+### _sass/components
+
+Pour les plus petits composants, il y a le dossier components/. Alors que layout/ est macro (c’est-à-dire qu’il définit l’armature globale), components/ est plus centré sur les widgets. Il contient toutes sortes de modules spécifiques tels qu’un slider, un loader, un widget et toutes ces sortes de choses. Il y a en général de nombreux fichiers dans components/ car l’application tout entière devrait être essentiellement constituée de petits modules.
+
+### _sass/abstracts
+
+Le dossier abstracts/ regroupe les outils et helpers Sass utilisés à travers le projet. Toutes les variables globales, les fonctions, les mixins et les placeholders devraient se retrouver dans ce dossier.
+
+La règle générale concernant ce dossier est qu’il ne devrait pas retourner une seule ligne de CSS s’il était compilé seul. Ce ne sont ici que des helpers Sass.
+
+### _sass/vendors
+
+Et last but not least, la plupart des projets comportent un dossier vendors/ qui regroupe tous les fichiers CSS provenant de bibliothèques et frameworks externes — Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, etc. Le fait de les mettre ainsi de côté dans un dossier séparé est une bonne façon d’indiquer qu’ils ne sont pas de vous et ne relèvent pas de votre responsabilité.
+
+
