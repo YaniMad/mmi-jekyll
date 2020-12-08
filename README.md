@@ -39,6 +39,13 @@ jekyll serve
 
 À partir de là, vous êtes prêt à développer !
 
+
+> Utilisez l'argument "--livereload" pour un rafraichissement automatique de la page
+> ```
+> jekyll serve --livereload
+> ```
+
+
 ## Setup du projet
 
 Une personne du groupe va créer le repository sur github. 
